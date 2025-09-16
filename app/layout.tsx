@@ -1,10 +1,6 @@
 import { Inter as FontSans } from "next/font/google"
 import {
   ClerkProvider,
-  SignInButton,
-  SignedIn,
-  SignedOut,
-  UserButton
 } from '@clerk/nextjs'
 import { cn } from "@/lib/utils"
 import './globals.css'

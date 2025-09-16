@@ -4,7 +4,7 @@ import { ClientSideSuspense, RoomProvider } from '@liveblocks/react/suspense'
 import { Editor } from '@/components/editor/Editor'
 import Header from '@/components/Header'
 import { SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/nextjs'
-import React, { KeyboardEvent, useEffect, useRef, useState } from 'react'
+import React, { ChangeEvent, KeyboardEvent, useEffect, useRef, useState } from 'react'
 import ActiveCollaborators from './ActiveCollaborators'
 import { Input } from '@/src/components/ui/input'
 import Image from 'next/image'
@@ -77,7 +77,7 @@ const CollaborativeRoom = ({roomId, roomMetadata, currentUserType, users}: Colla
                     value={documentTitle}
                     ref={inputRef}
                     placeholder="Enter Title"
-                    onChange={(e: any) => setDocumentTitle(e.target.value)}
+                    onChange={(e: ChangeEvent<HTMLInputElement>) => setDocumentTitle(e.target.value)}
                     onKeyDown={updateTitleHandler}
                     disabled={!editing}
                     className="document-title-input"

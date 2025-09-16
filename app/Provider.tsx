@@ -23,7 +23,7 @@ const Provider = ({ children }: { children: ReactNode }) => {
       const roomUsers = await getDocumentUsers({
         roomId, 
         text,
-        currentUser: clerkUser?.emailAddresses[0].emailAddress!
+        currentUser: clerkUser?.emailAddresses[0].emailAddress ?? ""
       })
       return roomUsers
     }}
